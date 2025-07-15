@@ -1,0 +1,69 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="페이지-1" id="GsP-KicLp2dOe0hRcQ3u">
+    <mxGraphModel dx="669" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="600" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-1" value="리눅스 시스템콜 방식&lt;br&gt;ex : socket()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-3" value="socket() 호출" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="110" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qeWGnm4xlCOl5Y4aqOJ3-4" target="qeWGnm4xlCOl5Y4aqOJ3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-4" value="glibc가 내부적으로 시스템콜 발생" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="110" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qeWGnm4xlCOl5Y4aqOJ3-3" target="qeWGnm4xlCOl5Y4aqOJ3-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qeWGnm4xlCOl5Y4aqOJ3-7" target="qeWGnm4xlCOl5Y4aqOJ3-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-7" value="커널이 시스템 콜 번호에 따라 시스템 콜 테이블 참조syscall_64.tbl" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="359" y="95" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-9" value="시스템 콜 테이블에서 sys_scoetk() 주소를 찾아 호출" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="95" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="600" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-16" value="socket 호출 흐름" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qeWGnm4xlCOl5Y4aqOJ3-17" target="qeWGnm4xlCOl5Y4aqOJ3-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-17" value="socket() 호출" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-18" value="커널이 struct socket,&lt;div&gt;struct file 생성&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="310" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qeWGnm4xlCOl5Y4aqOJ3-20" target="qeWGnm4xlCOl5Y4aqOJ3-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-20" value="커널이 파일 디스크립터 테이블에 struct file* 저장 및 유저에게 fd만 반환" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="359" y="280" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.554;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qeWGnm4xlCOl5Y4aqOJ3-18" target="qeWGnm4xlCOl5Y4aqOJ3-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-22" value="유저가 fd로 테이블에 접근하면, fd 테이블에서 struct file* 접근 및 file-&amp;gt;private_data를 통해 socket* 접근" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="280" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeWGnm4xlCOl5Y4aqOJ3-24" value="* 리눅스 커널은 각 프로세스 마다 파일 디스크립터 테이블이 있음" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="110" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
